@@ -1,0 +1,15 @@
+class Solution {
+  bool isPalindrome(int x) {
+    if(x<0) return false;
+    int originalNum =x;//121
+    int reversedNum =0;
+    while(x>0){
+        int digit= x%10;// 1, 2, 1
+        reversedNum= reversedNum* 10+ digit;// 1, 12, 121
+        x~/=10;// 12, 1, 0
+    }
+        return originalNum == reversedNum;
+
+  }
+}
+
